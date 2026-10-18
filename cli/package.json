@@ -1,0 +1,9 @@
+{
+  "name": "hooklab-cli",
+  "version": "0.1.0",
+  "description": "Command-line access to the HookLab outlier library and live refresh pipeline",
+  "type": "module",
+  "bin": { "hooklab": "./bin/hooklab.mjs" },
+  "engines": { "node": ">=24" },
+  "license": "MIT"
+}

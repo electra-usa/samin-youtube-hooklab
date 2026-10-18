@@ -1,0 +1,17 @@
+# Private to the machine that made the rebuild: exported data, REA captures of the
+# original site, research notes, and the tooling that talks to the original service.
+data/
+evidence/
+research/
+scripts/private/
+docs/REBUILD-BRIEF.md
+
+# Secrets and local state
+.env
+.env.*
+app/.env*
+
+node_modules/
+__pycache__/
+.DS_Store
+*.log

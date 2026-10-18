@@ -1,0 +1,23 @@
+# Private data and captures never go into the image; mount data/ as a volume instead.
+data/
+evidence/
+research/
+scripts/
+docs/screenshots/
+
+# Secrets: pass them at runtime (env_file / platform secrets).
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Build output and dependencies are rebuilt inside the image.
+**/node_modules/
+app/.next/
+**/*.tsbuildinfo
+app/next-env.d.ts
+
+.git/
+**/.DS_Store
+**/__pycache__/
+**/*.log

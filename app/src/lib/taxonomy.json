@@ -1,0 +1,288 @@
+{
+  "publish_date_windows": [
+    {
+      "id": "all",
+      "label": "All time"
+    },
+    {
+      "id": "week",
+      "label": "Last week"
+    },
+    {
+      "id": "month",
+      "label": "Last month"
+    },
+    {
+      "id": "3months",
+      "label": "Last 3 months"
+    },
+    {
+      "id": "6months",
+      "label": "Last 6 months"
+    },
+    {
+      "id": "year",
+      "label": "Last year"
+    },
+    {
+      "id": "2years",
+      "label": "Last 2 years"
+    }
+  ],
+  "performance_tiers": [
+    {
+      "id": "flops",
+      "label": "Flops",
+      "scoreLabel": "< 0.3x",
+      "min": 0,
+      "max": 0.3,
+      "dotClass": "bg-gray-500",
+      "badgeClass": "bg-gray-500/10 text-gray-500 dark:bg-gray-500/20"
+    },
+    {
+      "id": "below_avg",
+      "label": "Below Average",
+      "scoreLabel": "0.3x – 1x",
+      "min": 0.3,
+      "max": 1,
+      "dotClass": "bg-gray-400 dark:bg-gray-600",
+      "badgeClass": "bg-gray-500/10 text-gray-400 dark:bg-gray-500/10 dark:text-gray-500"
+    },
+    {
+      "id": "pretty_good",
+      "label": "Pretty Good",
+      "scoreLabel": "1x – 2x",
+      "min": 1,
+      "max": 2,
+      "dotClass": "bg-orange-500",
+      "badgeClass": "bg-orange-500/10 text-orange-500 dark:bg-orange-500/20"
+    },
+    {
+      "id": "above_avg",
+      "label": "Above Average",
+      "scoreLabel": "2x – 4x",
+      "min": 2,
+      "max": 4,
+      "dotClass": "bg-yellow-500",
+      "badgeClass": "bg-yellow-500/10 text-yellow-600 dark:bg-yellow-500/20 dark:text-yellow-500"
+    },
+    {
+      "id": "great",
+      "label": "Great",
+      "scoreLabel": "4x – 10x",
+      "min": 4,
+      "max": 10,
+      "dotClass": "bg-accent",
+      "badgeClass": "brand-accent-chip"
+    },
+    {
+      "id": "bangers",
+      "label": "Bangers",
+      "scoreLabel": "10x – 50x",
+      "min": 10,
+      "max": 50,
+      "dotClass": "bg-accent-blue",
+      "badgeClass": "brand-accent-blue-chip"
+    },
+    {
+      "id": "mega_bangers",
+      "label": "Mega Bangers",
+      "scoreLabel": "≥ 50x",
+      "min": 50,
+      "max": 999,
+      "dotClass": "bg-purple-500",
+      "badgeClass": "bg-purple-500/10 text-purple-500 dark:bg-purple-500/20"
+    }
+  ],
+  "click_triggers": [
+    "Authority",
+    "Beginners",
+    "Confirms Suspicions",
+    "Conflict",
+    "Conspiracy",
+    "Constraint",
+    "Contrast",
+    "Controversy",
+    "Counterintuitive",
+    "Curiosity",
+    "Daily",
+    "Desire",
+    "Drama",
+    "Epic",
+    "Escape",
+    "Experience",
+    "Extreme",
+    "Fear",
+    "FOMO",
+    "Future",
+    "List",
+    "Mistake",
+    "Moment",
+    "Negativity",
+    "New",
+    "News",
+    "Open Loop",
+    "Pain Point",
+    "Price",
+    "Question",
+    "Refute Objection",
+    "Regret",
+    "Scarcity",
+    "SEO-Friendly",
+    "Seasonality",
+    "Secret",
+    "Social Proof",
+    "Specific Audience",
+    "Speed",
+    "Status",
+    "Time Frame",
+    "Transformation",
+    "Universal",
+    "Urgency",
+    "Warning",
+    "Weird",
+    "X vs. Y",
+    "Year"
+  ],
+  "niches": [
+    "Anime & Manga",
+    "Art",
+    "Automotive",
+    "Beauty & Fashion",
+    "Careers",
+    "Comedy & Sketch",
+    "Crafting & Sewing",
+    "Education & Study Tips",
+    "Engineering & Maker",
+    "Farming & Gardening",
+    "Film & Cinema",
+    "Finance",
+    "Fitness",
+    "Food & Drink",
+    "Gaming",
+    "Geopolitics & Economics",
+    "Graphic Design",
+    "Health",
+    "History",
+    "Home & DIY",
+    "Language Learning",
+    "Legal",
+    "Lifestyle",
+    "Marketing & Business",
+    "Music Education",
+    "Music Entertainment",
+    "News & Politics",
+    "Outdoors",
+    "Parenting",
+    "Personal Development & Motivation",
+    "Pets & Animals",
+    "Photography & Videography",
+    "Pop Culture",
+    "Productivity",
+    "Real Estate",
+    "Relationships",
+    "Religion & Spirituality",
+    "Science",
+    "Social Media & Content Creation",
+    "Sports Education",
+    "Sports Entertainment",
+    "Technology",
+    "Toys & Collecting",
+    "Travel",
+    "True Crime"
+  ],
+  "title_formats": [
+    "Challenge",
+    "Tutorial",
+    "Explainer",
+    "List",
+    "Story",
+    "Review",
+    "Reaction"
+  ],
+  "search_modes": [
+    {
+      "id": "topic",
+      "label": "Topic",
+      "description": "Search for videos about a topic."
+    },
+    {
+      "id": "keyword",
+      "label": "Keyword",
+      "description": "Search for exact keywords in titles."
+    },
+    {
+      "id": "title_pattern",
+      "label": "Title Formula",
+      "description": "Search videos that use the same title formulas."
+    },
+    {
+      "id": "thumbnail",
+      "label": "Thumbnail",
+      "description": "Search thumbnail visuals and design elements."
+    }
+  ],
+  "title_feedback_reasons": [
+    {
+      "value": "too_clickbaity",
+      "label": "Too clickbaity"
+    },
+    {
+      "value": "not_accurate",
+      "label": "Not accurate for this video"
+    },
+    {
+      "value": "offbrand",
+      "label": "Offbrand"
+    },
+    {
+      "value": "awkward_wording",
+      "label": "Wording is awkward"
+    },
+    {
+      "value": "too_boring",
+      "label": "Too boring"
+    },
+    {
+      "value": "other",
+      "label": "Other"
+    }
+  ],
+  "povs": [
+    "first_person_experience",
+    "first_person_teaching",
+    "second_person_direct",
+    "third_person_curation",
+    "third_person_explanatory"
+  ],
+  "outlier_filter_defaults": [
+    {
+      "videoType": "longform",
+      "selectedTierIds": [
+        "above_avg",
+        "great",
+        "bangers",
+        "mega_bangers"
+      ],
+      "publishDate": "all",
+      "viewsMin": 10000,
+      "subscriberMin": 0,
+      "subscriberMax": 50000000,
+      "titleLengthMin": 0,
+      "titleLengthMax": 100,
+      "newsletterFeatured": "all",
+      "excludedNiches": [
+        "Geopolitics & Economics",
+        "Legal",
+        "News & Politics"
+      ]
+    }
+  ],
+  "chat_progress_stages": [
+    "_preparing",
+    "_routing",
+    "_loading_context",
+    "_deep_research",
+    "_generating"
+  ]
+}

@@ -1,0 +1,41 @@
+# HookLab hosted: the web app plus the live-outliers worker, sharing one data volume.
+#
+#   cp app/.env.local .env      # or create .env: SCRAPECREATORS_API_KEY, ANTHROPIC_API_KEY, HOOKLAB_API_KEY…
+#   mkdir -p data && sudo chown -R 1000:1000 data    # Linux: the containers run as uid 1000
+#   docker compose up -d --build
+#
+# The worker polls channel feeds every 60 minutes (`hooklab refresh --loop`). The app's own
+# in-process scheduler stays off here so only one loop runs; both share the run lock anyway.
+# docs/DEPLOY.md has the details (volumes, cron alternative, why not serverless).
+
+x-hooklab: &hooklab
+  image: hooklab:latest
+  env_file:
+    - path: .env
+      required: false
+  volumes:
+    - ./data:/data
+  restart: unless-stopped
+
+services:
+  app:
+    <<: *hooklab
+    build: .
+    ports:
+      - "${HOOKLAB_PORT:-3210}:3000"
+    environment:
+      HOOKLAB_DATA_DIR: /data
+      HOOKLAB_REFRESH_EVERY_MINUTES: "0"
+
+  worker:
+    <<: *hooklab
+    # Same image as app (built by the app service).
+    pull_policy: never
+    depends_on:
+      - app
+    working_dir: /hooklab
+    command: ["node", "cli/bin/hooklab.mjs", "refresh", "--loop", "--every", "60"]
+    environment:
+      HOOKLAB_DATA_DIR: /data
+    healthcheck:
+      disable: true

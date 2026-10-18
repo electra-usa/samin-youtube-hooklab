@@ -1,0 +1,125 @@
+@import "tailwindcss";
+@import "../../public/fonts/satoshi.css";
+
+@source "../lib/taxonomy.json";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Design tokens observed in the original stylesheet (evidence/css). */
+@theme {
+  --font-sans: "Satoshi", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  /* Video titles and metadata use YouTube's Roboto, as in the original cards. */
+  --font-roboto: var(--font-roboto-src), "Roboto", Arial, sans-serif;
+  --color-dark: #0d0d0d;
+  --color-dark-3: #252525;
+  --color-dark-4: #343434;
+  --color-dark-5: #6b7280;
+  --color-navy: #090e26;
+  --color-primary: #164466;
+  --color-primary-hover: #0f3350;
+  --color-accent: #b7fda0;
+  --color-accent-blue: #4f9dd1;
+  --color-accent-blue-text: #2c78a8;
+  --color-stroke: #e8e8e8;
+  --color-sidebar: #f7f7f8;
+  --color-sidebar-active: #ebebeb;
+  --color-gray-soft: #eff4fb;
+}
+
+:root {
+  --color-muted: #6b7280;
+  color-scheme: light;
+}
+
+.dark {
+  --color-muted: #9ca3af;
+  --color-accent-blue-text: #4f9dd1;
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-dark);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body {
+  color: #e5e9ea;
+  background: #111214;
+}
+
+/* Click-trigger and tier chips (class names kept from the original CSS). */
+.brand-accent-chip {
+  color: #090e26;
+  background-color: #b7fda059;
+}
+.brand-accent-blue-chip {
+  color: #090e26;
+  background-color: #4f9dd11f;
+}
+.brand-accent-blue-panel {
+  color: #090e26;
+  background-color: #4f9dd114;
+  border-color: #4f9dd159;
+}
+.dark .brand-accent-chip {
+  color: #e5e9ea;
+  background-color: #b7fda033;
+}
+.dark .brand-accent-blue-chip {
+  color: #e5e9ea;
+  background-color: #4f9dd133;
+}
+.dark .brand-accent-blue-panel {
+  color: #e5e9ea;
+  background-color: #4f9dd129;
+  border-color: #4f9dd166;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+/* Markdown inside chat replies. */
+.prose-chat p {
+  margin: 0.5rem 0;
+}
+.prose-chat ul,
+.prose-chat ol {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+.prose-chat ul {
+  list-style: disc;
+}
+.prose-chat ol {
+  list-style: decimal;
+}
+.prose-chat li {
+  margin: 0.25rem 0;
+}
+.prose-chat strong {
+  font-weight: 700;
+}
+.prose-chat h1,
+.prose-chat h2,
+.prose-chat h3 {
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+}
+.prose-chat code {
+  background: #f3f4f6;
+  border-radius: 4px;
+  padding: 0 4px;
+  font-size: 0.9em;
+}
+.prose-chat a {
+  color: var(--color-accent-blue-text);
+  text-decoration: underline;
+}
